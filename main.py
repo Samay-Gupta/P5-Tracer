@@ -63,8 +63,8 @@ if GENERATE_JSON:
     json.dump(coordinates_dict, open(OUTPUT_JSON_FILE, 'w'))
 with open(TEMPLATE_FILE) as file_obj:
     template = file_obj.read()
-template = template.replace('/* X_WIDTH */', str(CANVAS_SIZE[0]))
-template = template.replace('/* Y_WIDTH */', str(CANVAS_SIZE[1]))
+template = template.replace('/*X_WIDTH*/', str(CANVAS_SIZE[0]))
+template = template.replace('/*Y_WIDTH*/', str(CANVAS_SIZE[1]))
 template = template.replace('/* TODO */', DRAW_CODE)
 with open(OUTPUT_JS_FILE, 'w') as file_obj:
     file_obj.write(template)
